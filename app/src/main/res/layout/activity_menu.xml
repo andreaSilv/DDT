@@ -7,34 +7,46 @@
     tools:context="com.example.andrea.ddt.Menu">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center_vertical"
+        android:gravity="center_vertical|center_horizontal"
         android:orientation="vertical"
-        android:visibility="visible">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
-        <com.example.andrea.custom.widgets.MenuButton
-            android:id="@+id/settings_button"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/ico_settings"
-            android:text="@string/settings_button_title" />
+            android:orientation="vertical">
 
-        <com.example.andrea.custom.widgets.MenuButton
-            android:id="@+id/connections_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableTop="@drawable/ico_connections"
-            android:text="@string/connections_button_title" />
+            <com.example.andrea.custom.widgets.MenuButton
+                android:id="@+id/documents_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ico_documents"
+                android:text="@string/documents_button_title"
+                android:textSize="@dimen/button_menu_font_size" />
 
-        <com.example.andrea.custom.widgets.MenuButton
-            android:id="@+id/documents_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableTop="@drawable/ico_documents"
-            android:text="@string/documents_button_title" />
+            <com.example.andrea.custom.widgets.MenuButton
+                android:id="@+id/connections_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ico_connections"
+                android:text="@string/connections_button_title"
+                android:textSize="@dimen/button_menu_font_size" />
+
+            <com.example.andrea.custom.widgets.MenuButton
+                android:id="@+id/settings_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ico_settings"
+                android:text="@string/settings_button_title"
+                android:textSize="@dimen/button_menu_font_size" />
+
+        </LinearLayout>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
